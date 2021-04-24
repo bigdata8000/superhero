@@ -1,0 +1,35 @@
+{% extends 'hero_app/base.html' %}
+{% block content %}
+
+<h2>Sample Super Heros database</h2>
+{% comment %} {% for a in object_list %}
+<ul>
+    <li>Hero Name: {{ a.hero_name }}</li> 
+    <li>Full Name: {{ a.full_name }}</li> 
+    <li>Universe: {{ a.universe }}</li> 
+</ul>
+{% endfor %} {% endcomment %}
+
+
+<table class="table table-striped table-hover">
+  <thead class="table-success">
+    <tr class="table-active">
+      <th scope="col">Hero Name</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Universe</th>
+    </tr>
+  </thead>
+  <tbody class='table-striped'>
+    {% for a in object_list %}
+    <tr>
+      <td>{{ a.hero_name }}</td>
+      <td>{{ a.full_name }}</td>
+      <td>{{ a.universe }}</td>
+    </tr>  
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+{% endblock %}
